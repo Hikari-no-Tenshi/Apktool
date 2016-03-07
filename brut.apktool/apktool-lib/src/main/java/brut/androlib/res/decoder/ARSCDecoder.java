@@ -404,7 +404,7 @@ public class ARSCDecoder {
                 continue;
             }
 
-            ResResSpec spec = new ResResSpec(new ResID(resId | i), String.format("APKTOOL_DUMMY_%04x", i), mPkg, mTypeSpec);
+            ResResSpec spec = new ResResSpec(new ResID(resId | i), "APKTOOL_DUMMY_" + Integer.toHexString(i), mPkg, mTypeSpec);
             mPkg.addResSpec(spec);
             mTypeSpec.addResSpec(spec);
 
