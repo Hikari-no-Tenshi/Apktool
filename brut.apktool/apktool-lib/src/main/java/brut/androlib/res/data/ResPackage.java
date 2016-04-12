@@ -156,10 +156,6 @@ public class ResPackage {
         return mSynthesizedRes.contains(resId);
     }
 
-    public void removeResSpec(ResResSpec spec) throws AndrolibException {
-        mResSpecs.remove(spec.getId());
-    }
-
     public void addResSpec(ResResSpec spec) throws AndrolibException {
         if (mResSpecs.put(spec.getId(), spec) != null) {
             throw new AndrolibException("Multiple resource specs: " + spec);
@@ -181,9 +177,6 @@ public class ResPackage {
     }
 
     public void addResource(ResResource res) {
-    }
-
-    public void removeResource(ResResource res) {
     }
 
     public void addSynthesizedRes(int resId) {

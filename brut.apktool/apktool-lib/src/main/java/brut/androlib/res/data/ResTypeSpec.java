@@ -30,27 +30,14 @@ public final class ResTypeSpec {
     private final ResTable mResTable;
     private final ResPackage mPackage;
 
-    private final byte mId;
-    private final int mEntryCount;
-
-    public ResTypeSpec(String name, ResTable resTable, ResPackage package_, byte id, int entryCount) {
+    public ResTypeSpec(String name, ResTable resTable, ResPackage package_) {
         this.mName = name;
         this.mResTable = resTable;
         this.mPackage = package_;
-        this.mId = id;
-        this.mEntryCount = entryCount;
     }
 
     public String getName() {
         return mName;
-    }
-
-    public byte getId() {
-        return mId;
-    }
-
-    public int getEntryCount() {
-        return mEntryCount;
     }
 
     public boolean isString() {
@@ -68,10 +55,6 @@ public final class ResTypeSpec {
                     getName(), name));
         }
         return spec;
-    }
-
-    public void removeResSpec(ResResSpec spec) throws AndrolibException {
-        mResSpecs.remove(spec.getName());
     }
 
     public void addResSpec(ResResSpec spec) throws AndrolibException {
