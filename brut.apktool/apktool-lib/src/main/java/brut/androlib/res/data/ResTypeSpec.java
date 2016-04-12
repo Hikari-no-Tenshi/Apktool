@@ -64,7 +64,8 @@ public final class ResTypeSpec {
     public ResResSpec getResSpec(String name) throws AndrolibException {
         ResResSpec spec = mResSpecs.get(name);
         if (spec == null) {
-            throw new UndefinedResObject(String.format("resource spec: %s/%s", getName(), name));
+            throw new UndefinedResObject(String.format("resource spec: %s/%s",
+                    getName(), name));
         }
         return spec;
     }
@@ -75,7 +76,8 @@ public final class ResTypeSpec {
 
     public void addResSpec(ResResSpec spec) throws AndrolibException {
         if (mResSpecs.put(spec.getName(), spec) != null) {
-            throw new AndrolibException(String.format("Multiple res specs: %s/%s", getName(), spec.getName()));
+            throw new AndrolibException(String.format(
+                    "Multiple res specs: %s/%s", getName(), spec.getName()));
         }
     }
 
