@@ -346,6 +346,9 @@ final public class AndrolibResources {
         if (apkOptions.updateFiles) {
             cmd.add("-u");
         }
+        if (apkOptions.debugMode) { // inject debuggable="true" into manifest
+            cmd.add("--debug-mode");
+        }
         // force package id so that some frameworks build with correct id
         // disable if user adds own aapt (can't know if they have this feature)
         if (mPackageId != null && ! customAapt && ! mSharedLibrary) {
@@ -677,7 +680,7 @@ final public class AndrolibResources {
         }
     }
 
-    private File getFrameworkDir() throws AndrolibException {
+    public File getFrameworkDir() throws AndrolibException {
         if (mFrameworkDirectory != null) {
             return mFrameworkDirectory;
         }
