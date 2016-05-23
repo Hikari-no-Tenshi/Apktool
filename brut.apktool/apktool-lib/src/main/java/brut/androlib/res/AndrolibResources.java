@@ -790,7 +790,8 @@ final public class AndrolibResources {
     private boolean mSharedLibrary = false;
 
     private final static String[] IGNORED_PACKAGES = new String[] {
-            "android", "com.htc", "miui", "android.miui", "com.lge", "com.lge.internal", "yi", "flyme" };
+            "android", "com.htc", "miui", "android.miui", "com.lge", "com.lge.internal", "yi", "flyme",
+            "air.com.adobe.appentry" };
 
     private final static String[] ALLOWED_PACKAGES = new String[] {
             "com.miui", "com.miui.core", "com.miui.rom", "com.miui.sdk" };
